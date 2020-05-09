@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/swxtxxdb?currentSchema=swgl
+    username: postgres
+    password: yuanyulou
+    driver-class-name: org.postgresql.Driver
