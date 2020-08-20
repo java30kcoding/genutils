@@ -1,6 +1,38 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/swxtxxdb?currentSchema=swgl
-    username: postgres
-    password: yuanyulou
-    driver-class-name: org.postgresql.Driver
+    ds1:
+      url: jdbc:postgresql://localhost:5432/postgres?currentSchema=zsxt
+      username: postgres
+      password: 123456
+      driver-class-name: org.postgresql.Driver
+    ds2:
+      url: jdbc:oracle:thin:@(DESCRIPTION =    (ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1521))    (CONNECT_DATA =      (SERVER = DEDICATED)      (SERVICE_NAME = orcl)    ))
+      username: TEST
+      password: yuanyulou
+      driver-class-name: oracle.jdbc.driver.OracleDriver
+  mail:
+    host: smtp.qq.com
+    username: 434356430@qq.com
+    password: x
+    default-encoding: utf-8
+    sender: 434356430@qq.com
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+#wx:
+#  mp:
+#    configs:
+#      - appId: 1111 （一个公众号的appid）
+#        secret: 1111（公众号的appsecret）
+#        token: 111 （接口配置里的Token值）
+#        aesKey: 111 （接口配置里的EncodingAESKey值）
+#      - appId: 2222 （另一个公众号的appid，以下同上）
+#        secret: 1111
+#        token: 111
+server:
+  port: 8080
+#        aesKey: 111
